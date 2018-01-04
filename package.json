@@ -1,0 +1,19 @@
+{
+  "name": "googlehome-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "slack": "node slack.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@slack/client": "^3.15.0",
+    "google-home-notifier": "^1.2.0"
+  }
+}
