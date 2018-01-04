@@ -17,7 +17,7 @@ npm install
 SLACK_TOKEN=<slack token> npm run slack
 
 # 言語指定
-SLACK_TOKEN=<slack token> LANG=en-US npm run slack
+SLACK_TOKEN=<slack token> LANGUAGE=en-US npm run slack
 
 # チャンネル指定する場合
 SLACK_TOKEN=<slack token> CHANNEL_ID=<channel id> npm run slack
