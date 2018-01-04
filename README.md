@@ -22,5 +22,5 @@ SLACK_TOKEN=<slack token> CHANNEL_ID=<channel id> npm run slack
 
 ### リンク等
 
-https://github.com/noelportugal/google-home-notifier#usage
-https://github.com/slackapi/node-slack-sdk#posting-a-message-with-the-real-time-messaging-api
+- https://github.com/noelportugal/google-home-notifier#usage
+- https://github.com/slackapi/node-slack-sdk#posting-a-message-with-the-real-time-messaging-api
