@@ -1,5 +1,5 @@
 const googlehome = require('google-home-notifier');
-const language = process.env.LANGUAGE || 'ja';
+const parseMessage = require('./parse-message');
 
 const { RtmClient, CLIENT_EVENTS } = require('@slack/client');
 
@@ -39,8 +39,9 @@ rtm.on(CLIENT_EVENTS.RTM.RAW_MESSAGE, (message) => {
     return;
   }
   console.log(`message from slack "${text}".(channel_id: ${channel})`);
-  googlehome.device('Google Home', language);
-  googlehome.notify(text, (res) => {
+  const { lang, text: msg } = parseMessage(text);
+  googlehome.device('Google Home', lang);
+  googlehome.notify(msg, (res) => {
     console.log(res);
   });
 });
