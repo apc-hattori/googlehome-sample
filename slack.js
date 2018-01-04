@@ -1,5 +1,5 @@
 const googlehome = require('google-home-notifier');
-const language = 'ja';
+const language = process.env.LANG || 'ja';
 
 const { RtmClient, CLIENT_EVENTS } = require('@slack/client');
 
