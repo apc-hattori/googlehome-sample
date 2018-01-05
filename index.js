@@ -1,10 +1,12 @@
 const googlehome = require('google-home-notifier');
-const language = 'ja'; // if not set 'us' language will be used
+const parseMessage = require('./parse-message');
 
-googlehome.device('Google Home', language); // Change to your Google Home name
+const message = '[en]Happy New Year!';
 
-const message = 'あけまして、おめでとうございます';
+const { lang, text } = parseMessage(message);
 
-googlehome.notify(message, (res) => {
+googlehome.device('Google Home', lang); // Change to your Google Home name
+
+googlehome.notify(text, (res) => {
   console.log(res);
 });
